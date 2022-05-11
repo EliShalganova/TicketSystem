@@ -31,6 +31,5 @@ int main()
   output << std::endl;
   output << 04 << " " << 15 << " " << 11;
 
-void NewEvent();
     return 0;
 }

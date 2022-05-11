@@ -19,7 +19,6 @@ public:
  int getMonth() const {return month;}
  int getYear() const {return year;}
 
- void NewEvent();
 
 };
 

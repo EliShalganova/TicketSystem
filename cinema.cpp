@@ -41,7 +41,7 @@ bool Cinema::AddEvent(Performance& performance)
     {
         performances[performanceSize++] = performance;
     }else{
-         std::clog << "";
+         std::clog << "There is already another performance in this hall on the same date!";
     }
 
 }

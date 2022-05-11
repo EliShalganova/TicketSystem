@@ -10,6 +10,6 @@ Tickets::Tickets(Performance& performance, String& password, int row , int place
    this->password = password;
    this->row = row;
    this->place = place;
-   MyString status("available"); 
+   String status("available"); 
 
 }

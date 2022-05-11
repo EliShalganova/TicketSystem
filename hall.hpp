@@ -17,26 +17,11 @@ class Hall
    unsigned getPlaces() const {return places;}
 
 
-  
-
-   
-
-   void TicketReservation();
-   void CancellationOfReservation();
-   void BuyingATicket();
-   void ReservationList();
-   void Reference();
-
    friend std::istream& operator>>(std::istream& is, Hall&);
 
 
 };
 
 std::ostream& operator<<(std::ostream& os, Hall const&);
-
-
-
-
-
 
 #endif
