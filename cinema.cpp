@@ -34,7 +34,7 @@ bool Cinema::IsFreeHall(Performance performance)
     return is_free;
 }
 
-bool Cinema::AddEvent(Performance& performance)
+void Cinema::AddEvent(Performance& performance)
 {
     bool is_free_hall = IsFreeHall(performance);
     if(is_free_hall)

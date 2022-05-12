@@ -17,7 +17,7 @@ class Cinema{
      int getPerformanceSize() const {return performanceSize;}
      int getTicketSize() const {return ticketSize;}
 
-     bool AddEvent(Performance&);
+     void AddEvent(Performance&);
      bool IsFreeHall(Performance);
      int FreePlaces(Performance);
     
