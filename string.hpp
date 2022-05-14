@@ -22,9 +22,9 @@ public:
 	size_t getSize() const {return size;}
 
 	
-    bool compare(const String &string) const ;
+    bool compare(const String &) const ;
 	
 };
-std::ostream &operator<<(std::ostream &out, const String &string);
+std::ostream &operator<<(std::ostream &out, const String &);
 bool operator==(const String &, const String&);
 #endif
