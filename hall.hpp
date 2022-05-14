@@ -10,7 +10,7 @@ class Hall
    unsigned places;
 
    public:
-   Hall(unsigned _id = 0, unsigned _rows = 1,unsigned _places = 1);
+   Hall(unsigned id = 0, unsigned rows = 1,unsigned places = 1);
 
    unsigned getId() const {return id;}
    unsigned getRows() const {return rows;}

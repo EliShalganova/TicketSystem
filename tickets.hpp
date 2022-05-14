@@ -25,7 +25,4 @@ String setStatus( String status) {this->status = status; }
 
 };
 
-
-
-
 #endif

@@ -2,8 +2,12 @@
 #include "hall.hpp"
 
 
-Hall::Hall(unsigned _id , unsigned _rows ,unsigned _places ) : id(_id), rows(_rows), places(_places)
-{}
+Hall::Hall(unsigned id , unsigned rows ,unsigned places )
+{
+    this->id = id;
+    this->rows = rows;
+    this->places = places;
+}
 
 std::istream& operator>>(std::istream& is, Hall& hall)
 {

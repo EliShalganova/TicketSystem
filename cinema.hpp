@@ -20,7 +20,10 @@ class Cinema{
      void AddEvent(Performance&);
      bool IsFreeHall(Performance);
      int FreePlaces(Performance);
-    
+     void AddTicket(Tickets&);
+     void ReserveTicket(Tickets&);
+     void CancelReservation(Tickets&);
+     bool Booking(Tickets&, String );
 };
 
 

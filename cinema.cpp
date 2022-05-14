@@ -17,15 +17,15 @@ bool Cinema::IsFreeHall(Performance performance)
 {
 
     int hall_id = performance.getHall().getId();
-    int day = performance.getDay();
-    int month = performance.getMonth();
-    int year = performance.getYear();
+    int day = performance.getDate().getDay();
+    int month = performance.getDate().getMonth();
+    int year = performance.getDate().getYear();
     bool is_free = true;
     for(int i=0; i<performanceSize && is_free != false; i++)
     {
        if(performances[i].getHall().getId() == hall_id)
        {
-           if(performances[i].getDay() == day && performances[i].getMonth() == month && performances[i].getYear() == year)
+           if(performances[i].getDate().getDay() == day && performances[i].getDate().getMonth() == month && performances[i].getDate().getYear() == year)
            {
                is_free = false;
            }
@@ -48,10 +48,57 @@ void Cinema::AddEvent(Performance& performance)
 
 int Cinema::FreePlaces(Performance performance)
 {
-    
+    String name = performance.getName();
     int count = 0;
     for(int i = 0; i < ticketSize; i++)
     {
-      
+
+     if( tickets[i].getPerformance().getName() == name)
+     {
+         if(tickets[i].getStatus() == "available")
+         {
+             count++;
+         }
+     }
     }
+    return count;
+}
+
+void Cinema::AddTicket(Tickets& ticket)
+{
+
+       if(ticketSize < 300)
+       {
+          tickets[ticketSize++] = ticket;
+       }
+
+}
+
+void Cinema::ReserveTicket(Tickets& ticket)
+{
+    ticket.setStatus("reserved");
+}
+
+void Cinema::CancelReservation(Tickets& ticket)
+{
+    ticket.setStatus("available");
+}
+
+bool Cinema::Booking(Tickets& ticket, String password)
+{
+    bool isBooked = false;
+    if(ticket.getStatus() == "available")
+    {
+        ticket.setStatus("sold");
+        isBooked = true;
+    }else if (ticket.getStatus() == "reserved")
+    {
+       if( ticket.getPassword() == password)
+       {
+           ticket.setStatus("sold");
+           isBooked = true;
+       }
+    }
+    return isBooked;
+    
 }
