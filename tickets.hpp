@@ -21,7 +21,7 @@ String getPassword() const {return password;}
 
 String status;
 String getStatus() const {return status;}
-String setStatus( String status) {this->status = status; }
+String setStatus( String status) { return this->status = status;}
 
 };
 

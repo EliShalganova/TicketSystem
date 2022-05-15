@@ -20,7 +20,7 @@ std::ostream& operator<<(std::ostream& os, Hall const& hall)
 }
 
 
-int main()
+/*int main()
 {
 
   std::ofstream output{
@@ -36,4 +36,4 @@ int main()
   output << 04 << " " << 15 << " " << 11;
 
     return 0;
-}
+}*/

@@ -3,7 +3,6 @@
 #include "performance.hpp"
 #include <cstring>
 #include "hall.hpp"
-#include <cassert>
 
 Cinema::Cinema()
 {
@@ -34,16 +33,16 @@ bool Cinema::IsFreeHall(Performance performance)
     return is_free;
 }
 
-void Cinema::AddEvent(Performance& performance)
+bool Cinema::AddEvent(Performance& performance)
 {
     bool is_free_hall = IsFreeHall(performance);
     if(is_free_hall)
     {
         performances[performanceSize++] = performance;
     }else{
-         std::clog << "There is already another performance in this hall on the same date!";
+         std::cout << "There is already another performance in this hall on the same date!";
     }
-
+   return is_free_hall;
 }
 
 int Cinema::FreePlaces(Performance performance)

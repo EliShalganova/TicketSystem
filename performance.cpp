@@ -10,4 +10,9 @@ Performance::Performance(String& name, Hall hall, Date date)
     this->date = date;
 }
 
+std::ostream& operator<<(std::ostream& os, Performance const& performance)
+{
+    return os << performance.getName() << " " << performance.getHall() << " " << performance.getDate() << std::endl;
+}
+
 

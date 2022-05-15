@@ -9,6 +9,11 @@ Date::Date(int day, int month, int year)
     this->year = year;
 }
 
+std::ostream& operator<<(std::ostream& os, Date const& date)
+{
+  return os << date.getDay() << " " << date.getMonth() << " " << date.getYear() << std::endl;
+}
+
 bool Date::ValidateDate()
 {
     bool isValid;

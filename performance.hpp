@@ -3,6 +3,7 @@
 #include "string.hpp"
 #include "hall.hpp"
 #include "date.hpp"
+#include <fstream>
 
 class Performance{
 
@@ -21,6 +22,6 @@ public:
 
 };
 
-
+std::ostream& operator<<(std::ostream& os, Performance const&);
 
 #endif

@@ -3,6 +3,8 @@
 #include "performance.hpp"
 #include "string.hpp"
 
+Tickets::Tickets()
+{}
 
 Tickets::Tickets(Performance& performance, String& password, int row , int place )
 {
