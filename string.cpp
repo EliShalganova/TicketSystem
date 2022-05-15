@@ -2,7 +2,7 @@
 #include "string.hpp"
 #include <cstring>
 
-
+///from: https://github.com/Angeld55/Object-oriented_programming_FMI
 String::String()
 {
 	str = new char[1];

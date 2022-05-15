@@ -20,20 +20,20 @@ std::ostream& operator<<(std::ostream& os, Hall const& hall)
 }
 
 
-/*int main()
+int main_1()
 {
 
   std::ofstream output{
       "file.txt"
   };
 
-  output << 01 << " " << 5 << " " <<  10 ;
+  output << 1 << " " << 5 << " " <<  10 ;
   output << std::endl;
-  output << 02 << " " << 20 << " " << 15;
+  output << 2 << " " << 20 << " " << 15;
   output << std::endl;
-  output << 03 << " " << 25 << " " << 16;
+  output << 3 << " " << 25 << " " << 16;
   output << std::endl;
-  output << 04 << " " << 15 << " " << 11;
+  output << 4 << " " << 15 << " " << 11;
 
     return 0;
-}*/
+}

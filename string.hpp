@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-
+//from: https://github.com/Angeld55/Object-oriented_programming_FMI
 class String
 {
 	char* str;
